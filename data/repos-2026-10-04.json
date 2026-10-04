@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "generated_at": "2026-10-04T14:30:00+08:00",
+    "generator": "WorkBuddy / GitHub Search API",
+    "account": "amingamiya",
+    "queries": [
+      "stars:>30000 topic:awesome",
+      "web-scraping stars:>6000 language:Python",
+      "reverse-engineering stars:>5000",
+      "topic:windows stars:>8000",
+      "topic:self-hosted stars:>25000",
+      "topic:fun stars:>1000",
+      "topic:android stars:>40000",
+      "topic:pentesting stars:>3000"
+    ],
+    "total_unique_repos": 116
+  },
+  "categories": {
+    "tools": {
+      "label": "实用工具",
+      "repos": [
+        { "full_name": "microsoft/PowerToys", "stars": 139199, "lang": "C", "desc": "Windows 效率套件：FancyZones/Paste as Plain Text/PowerRename" },
+        { "full_name": "microsoft/terminal", "stars": 105071, "lang": "C++", "desc": "Windows Terminal" },
+        { "full_name": "alacritty/alacritty", "stars": 65882, "lang": "Rust", "desc": "极简 GPU 终端" },
+        { "full_name": "Raphire/Win11Debloat", "stars": 57897, "lang": "PowerShell", "desc": "Win10/11 一键精简" },
+        { "full_name": "agalwood/Motrix", "stars": 56066, "lang": "TypeScript", "desc": "全功能下载管理器" },
+        { "full_name": "ventoy/Ventoy", "stars": 79707, "lang": "C", "desc": "多 ISO U 盘启动" },
+        { "full_name": "rustdesk/rustdesk", "stars": 125076, "lang": "Rust", "desc": "自建远程桌面" },
+        { "full_name": "tw93/Pake", "stars": 61899, "lang": "Rust", "desc": "网页打包成桌面应用" },
+        { "full_name": "marktext/marktext", "stars": 62098, "lang": "TypeScript", "desc": "Markdown 编辑器" },
+        { "full_name": "FiloSottile/mkcert", "stars": 59718, "lang": "Go", "desc": "本地受信任证书生成" },
+        { "full_name": "2dust/v2rayN", "stars": 117577, "lang": "C#", "desc": "Windows 代理客户端 GUI" },
+        { "full_name": "2dust/v2rayNG", "stars": 63474, "lang": "Kotlin", "desc": "安卓代理客户端" },
+        { "full_name": "clash-verge-rev/clash-verge-rev", "stars": 149088, "lang": "Rust", "desc": "Clash GUI 客户端" },
+        { "full_name": "trimstray/the-book-of-secret-knowledge", "stars": 247733, "lang": null, "desc": "命令行/技巧/工具速查" },
+        { "full_name": "jlevy/the-art-of-command-line", "stars": 162570, "lang": null, "desc": "命令行精华一页纸" },
+        { "full_name": "tldr-pages/tldr", "stars": 63816, "lang": "Markdown", "desc": "命令用法示例页" },
+        { "full_name": "tiimgreen/github-cheat-sheet", "stars": 59437, "lang": null, "desc": "Git/GitHub 技巧" },
+        { "full_name": "PowerShell/PowerShell", "stars": 55589, "lang": "C#", "desc": "跨平台 PowerShell" },
+        { "full_name": "Genymobile/scrcpy", "stars": 150961, "lang": "C", "desc": "安卓投屏控制 + 录屏" },
+        { "full_name": "laurent22/joplin", "stars": 56581, "lang": "TypeScript", "desc": "隐私笔记 + 剪藏" },
+        { "full_name": "team-spotube/spotube", "stars": 49594, "lang": "Dart", "desc": "跨平台音乐流" },
+        { "full_name": "jaywcjlove/awesome-mac", "stars": 115360, "lang": "Swift", "desc": "macOS 软件分类" },
+        { "full_name": "serhii-londar/open-source-mac-os-apps", "stars": 50627, "lang": null, "desc": "macOS 开源应用清单" }
+      ]
+    },
+    "crawling": {
+      "label": "爬虫/数据采集",
+      "repos": [
+        { "full_name": "D4Vinci/Scrapling", "stars": 85521, "lang": "Python", "desc": "自适应爬虫框架" },
+        { "full_name": "unclecode/crawl4ai", "stars": 84718, "lang": "Python", "desc": "网页转 LLM 友好 Markdown" },
+        { "full_name": "scrapy/scrapy", "stars": 64571, "lang": "Python", "desc": "最成熟的 Python 爬虫框架" },
+        { "full_name": "apify/crawlee-python", "stars": 9576, "lang": "Python", "desc": "大规模爬虫 SDK" },
+        { "full_name": "ScrapeGraphAI/Scrapegraph-ai", "stars": 31520, "lang": "Python", "desc": "AI 驱动的自然语言提取" },
+        { "full_name": "lexiforest/curl_cffi", "stars": 6650, "lang": "Python", "desc": "TLS/JA3/JA4 指纹伪装" },
+        { "full_name": "CloakHQ/CloakBrowser", "stars": 31882, "lang": "Python", "desc": "隐身 Chromium，反 bot 检测" },
+        { "full_name": "seleniumbase/SeleniumBase", "stars": 13050, "lang": "Python", "desc": "CDP/Stealth 模式浏览器自动化" },
+        { "full_name": "feder-cr/invisible_playwright_mcp", "stars": 31769, "lang": "Python", "desc": "反爬 Playwright MCP Server" },
+        { "full_name": "mherrmann/helium", "stars": 8327, "lang": "Python", "desc": "轻量 Selenium 封装" },
+        { "full_name": "alirezamika/autoscraper", "stars": 8001, "lang": "Python", "desc": "自动生成抓取器" },
+        { "full_name": "browser-act/skills", "stars": 6092, "lang": "Python", "desc": "Agent 浏览器自动化 CLI" },
+        { "full_name": "Evil0ctal/Douyin_TikTok_Download_API", "stars": 20451, "lang": "Python", "desc": "抖音/TikTok 采集与无水印下载" },
+        { "full_name": "soimort/you-get", "stars": 56867, "lang": "Python", "desc": "万能网页媒体下载器" },
+        { "full_name": "Tyrrrz/YoutubeDownloader", "stars": 16348, "lang": "C#", "desc": "YouTube 下载器 GUI" },
+        { "full_name": "dgtlmoon/changedetection.io", "stars": 34758, "lang": "Python", "desc": "网页变更监控与通知" },
+        { "full_name": "adbar/trafilatura", "stars": 6909, "lang": "Python", "desc": "网页正文抽取" },
+        { "full_name": "yusufkaraaslan/Skill_Seekers", "stars": 15096, "lang": "Python", "desc": "文档站转 Claude Skill" },
+        { "full_name": "MODSetter/SurfSense", "stars": 16318, "lang": "Python", "desc": "隐私优先 NotebookLM 替代" }
+      ]
+    },
+    "reverse": {
+      "label": "逆向/破解",
+      "repos": [
+        { "full_name": "NationalSecurityAgency/ghidra", "stars": 80473, "lang": "Java", "desc": "NSA 开源反汇编器" },
+        { "full_name": "x64dbg/x64dbg", "stars": 49684, "lang": "C++", "desc": "Windows 用户态调试器" },
+        { "full_name": "WerWolv/ImHex", "stars": 54970, "lang": "C++", "desc": "十六进制编辑器" },
+        { "full_name": "radareorg/radare2", "stars": 24919, "lang": "C", "desc": "UNIX 风格逆向框架" },
+        { "full_name": "rizinorg/cutter", "stars": 19860, "lang": "C++", "desc": "Rizin GUI 逆向平台" },
+        { "full_name": "pwndbg/pwndbg", "stars": 10994, "lang": "Python", "desc": "GDB/LLDB 增强插件" },
+        { "full_name": "Hack-with-Github/Awesome-Hacking", "stars": 121806, "lang": null, "desc": "安全研究资源总目录" },
+        { "full_name": "wtsxDev/reverse-engineering", "stars": 10446, "lang": null, "desc": "逆向资源清单" },
+        { "full_name": "mytechnotalent/Reverse-Engineering", "stars": 14391, "lang": "Assembly", "desc": "免费多架构逆向教程" },
+        { "full_name": "The-Art-of-Hacking/h4cker", "stars": 29608, "lang": "Jupyter Notebook", "desc": "数千条安全研究资源" },
+        { "full_name": "vitalysim/Awesome-Hacking-Resources", "stars": 17466, "lang": null, "desc": "漏洞利用/提权资源" },
+        { "full_name": "skylot/jadx", "stars": 50739, "lang": "Java", "desc": "dex → Java 反编译器" },
+        { "full_name": "iBotPeaches/Apktool", "stars": 25730, "lang": "Java", "desc": "APK 反编译重打包" },
+        { "full_name": "Konloch/bytecode-viewer", "stars": 15660, "lang": "Java", "desc": "字节码查看套件" },
+        { "full_name": "majd/ipatool", "stars": 11478, "lang": "Go", "desc": "iOS/macOS 应用搜索下载" },
+        { "full_name": "OWASP/mastg", "stars": 13221, "lang": "Python", "desc": "OWASP 移动安全测试指南" },
+        { "full_name": "librepods-org/librepods", "stars": 30140, "lang": "Kotlin", "desc": "AirPods 固件研究" },
+        { "full_name": "horsicq/Detect-It-Easy", "stars": 11630, "lang": "JavaScript", "desc": "文件类型/壳/编译器识别" },
+        { "full_name": "seemoo-lab/openhaystack", "stars": 13751, "lang": "Swift", "desc": "Find My 网络逆向研究" },
+        { "full_name": "HIllya51/LunaTranslator", "stars": 13534, "lang": "C++", "desc": "视觉小说翻译器/文本 Hook" },
+        { "full_name": "mrexodia/ida-pro-mcp", "stars": 12457, "lang": "Python", "desc": "IDA Pro MCP 服务器" },
+        { "full_name": "zhaoxuya520/reverse-skill", "stars": 39550, "lang": "PowerShell", "desc": "AI 逆向技能路由包" },
+        { "full_name": "JCodesMore/ai-website-cloner-template", "stars": 35599, "lang": "TypeScript", "desc": "AI 克隆网站模板" },
+        { "full_name": "xtekky/gpt4free", "stars": 66756, "lang": "Python", "desc": "LLM Web 端逆向接入" },
+        { "full_name": "WhiskeySockets/Baileys", "stars": 11228, "lang": "JavaScript", "desc": "WhatsApp Web 协议库" }
+      ]
+    },
+    "security": {
+      "label": "安全/渗透",
+      "repos": [
+        { "full_name": "sherlock-project/sherlock", "stars": 93202, "lang": "Python", "desc": "用户名全网账号搜索" },
+        { "full_name": "soxoj/maigret", "stars": 38231, "lang": "Python", "desc": "6000+ 站点人员档案" },
+        { "full_name": "smicallef/spiderfoot", "stars": 22751, "lang": "Python", "desc": "OSINT 自动化攻击面测绘" },
+        { "full_name": "qeeqbox/social-analyzer", "stars": 24172, "lang": "JavaScript", "desc": "1000+ 社交站点查人" },
+        { "full_name": "HunxByts/GhostTrack", "stars": 16872, "lang": "Python", "desc": "手机号/位置查询（受限）" },
+        { "full_name": "HackTricks-wiki/hacktricks", "stars": 12470, "lang": "CSS", "desc": "渗透技巧百科" },
+        { "full_name": "sqlmapproject/sqlmap", "stars": 38601, "lang": "Python", "desc": "SQL 注入自动化" },
+        { "full_name": "ffuf/ffuf", "stars": 16804, "lang": "Go", "desc": "Web fuzzing" },
+        { "full_name": "maurosoria/dirsearch", "stars": 14920, "lang": "Python", "desc": "Web 路径扫描" },
+        { "full_name": "OJ/gobuster", "stars": 14185, "lang": "Go", "desc": "目录/DNS/VHost 爆破" },
+        { "full_name": "bee-san/RustScan", "stars": 20497, "lang": "Rust", "desc": "现代端口扫描器" },
+        { "full_name": "bee-san/Ciphey", "stars": 21647, "lang": "Rust", "desc": "AI 自动解密/破解哈希" },
+        { "full_name": "vanhauser-thc/thc-hydra", "stars": 12326, "lang": "C", "desc": "暴力破解套件" },
+        { "full_name": "dstotijn/hetty", "stars": 12507, "lang": "Go", "desc": "HTTP 安全研究工具" },
+        { "full_name": "juice-shop/juice-shop", "stars": 14019, "lang": "TypeScript", "desc": "OWASP Juice Shop 靶场" },
+        { "full_name": "sundowndev/hacker-roadmap", "stars": 15631, "lang": null, "desc": "安全学习路线图" },
+        { "full_name": "KeygraphHQ/shannon", "stars": 48563, "lang": "TypeScript", "desc": "AI 渗透测试员" },
+        { "full_name": "0x4m4/hexstrike-ai", "stars": 12303, "lang": "Python", "desc": "150+ 安全工具 MCP 服务器" },
+        { "full_name": "promptfoo/promptfoo", "stars": 25686, "lang": "TypeScript", "desc": "LLM 红队测试" }
+      ]
+    },
+    "fun": {
+      "label": "好玩项目",
+      "repos": [
+        { "full_name": "ssloy/tinyrenderer", "stars": 24330, "lang": "C++", "desc": "手写光栅化教程" },
+        { "full_name": "ssloy/tinyraytracer", "stars": 5377, "lang": "C++", "desc": "手写光线追踪" },
+        { "full_name": "ssloy/tinyraycaster", "stars": 2050, "lang": "C++", "desc": "486 行 FPS" },
+        { "full_name": "ssloy/tinykaboom", "stars": 2428, "lang": "C++", "desc": "渲染进阶" },
+        { "full_name": "git-goods/gitanimals", "stars": 1781, "lang": "Kotlin", "desc": "GitHub 养成宠物" },
+        { "full_name": "vikiboss/60s", "stars": 5786, "lang": "TypeScript", "desc": "免费 API 集合" },
+        { "full_name": "knadh/dns.toys", "stars": 2830, "lang": "Go", "desc": "DNS 查询实用工具" },
+        { "full_name": "posva/catimg", "stars": 1580, "lang": "C", "desc": "终端打印图片/GIF" },
+        { "full_name": "sepandhaghighi/art", "stars": 2504, "lang": "Python", "desc": "ASCII 艺术库" },
+        { "full_name": "taigrr/spank", "stars": 5006, "lang": "Go", "desc": "拍 MacBook 它会叫" },
+        { "full_name": "HemantKArya/BloomeeTunes", "stars": 2250, "lang": "Dart", "desc": "无广告音乐应用" },
+        { "full_name": "microjs/microjs.com", "stars": 2031, "lang": "JavaScript", "desc": "微型 JS 库/框架合集" },
+        { "full_name": "Cog-Creators/Red-DiscordBot", "stars": 5717, "lang": "Python", "desc": "模块化 Discord 机器人" },
+        { "full_name": "moul/sshportal", "stars": 1942, "lang": "Go", "desc": "SSH 礼帽界面 + 审计" },
+        { "full_name": "replit/kaboom", "stars": 2734, "lang": "TypeScript", "desc": "JS 游戏引擎（已归档）" },
+        { "full_name": "MunGell/awesome-for-beginners", "stars": 89840, "lang": null, "desc": "新手友好项目清单" },
+        { "full_name": "521xueweihan/HelloGitHub", "stars": 179953, "lang": "Python", "desc": "中文入门开源项目月刊" }
+      ]
+    },
+    "selfhosted": {
+      "label": "自托管服务",
+      "repos": [
+        { "full_name": "awesome-selfhosted/awesome-selfhosted", "stars": 323716, "lang": null, "desc": "自托管项目最大索引" },
+        { "full_name": "louislam/uptime-kuma", "stars": 92093, "lang": "JavaScript", "desc": "自建监控 + 告警" },
+        { "full_name": "coollabsio/coolify", "stars": 62565, "lang": "PHP", "desc": "自建 PaaS" },
+        { "full_name": "go-gitea/gitea", "stars": 58285, "lang": "Go", "desc": "轻量自建 Git" },
+        { "full_name": "gogs/gogs", "stars": 47854, "lang": "Go", "desc": "更轻的 Git 服务" },
+        { "full_name": "Stirling-Tools/Stirling-PDF", "stars": 93543, "lang": "Java", "desc": "网页版 PDF 全能工具" },
+        { "full_name": "n8n-io/n8n", "stars": 206601, "lang": "TypeScript", "desc": "工作流自动化平台" },
+        { "full_name": "appsmithorg/appsmith", "stars": 41004, "lang": "TypeScript", "desc": "低代码内部工具" },
+        { "full_name": "ToolJet/ToolJet", "stars": 41031, "lang": "JavaScript", "desc": "低代码应用生成" },
+        { "full_name": "reactive-resume/reactive-resume", "stars": 43733, "lang": "TypeScript", "desc": "开源简历生成器" },
+        { "full_name": "usememos/memos", "stars": 63498, "lang": "Go", "desc": "极简时间线笔记" },
+        { "full_name": "siyuan-note/siyuan", "stars": 46626, "lang": "TypeScript", "desc": "思源笔记，本地优先 + MCP" },
+        { "full_name": "open-webui/open-webui", "stars": 153900, "lang": "Python", "desc": "自建 LLM 聊天界面" },
+        { "full_name": "HKUDS/nanobot", "stars": 48768, "lang": "Python", "desc": "轻量个人 AI Agent 框架" },
+        { "full_name": "janhq/jan", "stars": 44781, "lang": "Rust", "desc": "100% 离线 ChatGPT 替代" },
+        { "full_name": "unslothai/unsloth", "stars": 77184, "lang": "Python", "desc": "本地 LLM 训练/微调" },
+        { "full_name": "immich-app/immich", "stars": 115544, "lang": "TypeScript", "desc": "自建 Google Photos" },
+        { "full_name": "photoprism/photoprism", "stars": 40271, "lang": "Go", "desc": "AI 相册" }
+      ]
+    },
+    "meta_lists": {
+      "label": "元清单/索引",
+      "repos": [
+        { "full_name": "sindresorhus/awesome", "stars": 514286, "desc": "全 GitHub 最大 awesome 索引" },
+        { "full_name": "vinta/awesome-python", "stars": 325006, "desc": "Python 资源总索引" },
+        { "full_name": "trimstray/the-book-of-secret-knowledge", "stars": 247733, "desc": "知识与技巧大全" },
+        { "full_name": "avelino/awesome-go", "stars": 186816, "desc": "Go 资源索引" },
+        { "full_name": "justjavac/free-programming-books-zh_CN", "stars": 119221, "desc": "免费中文编程书籍" },
+        { "full_name": "hesreallyhim/awesome-claude-code", "stars": 55032, "desc": "Claude Code 资源" },
+        { "full_name": "VoltAgent/awesome-openclaw-skills", "stars": 52935, "desc": "OpenClaw 技能合集" }
+      ]
+    }
+  }
+}
