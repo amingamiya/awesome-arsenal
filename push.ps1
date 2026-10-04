@@ -26,7 +26,9 @@ Write-Host '>> 1/4 初始化本地仓库' -ForegroundColor Cyan
 if (-not (Test-Path '.git')) {
     git init | Out-Null
 }
-git branch -M $branch 2>&1 | Out-Null
+# 空仓库尚无任何分支，git branch -M 会报 "refname refs/heads/master not found"，
+# 因此直接改写 HEAD 指向目标分支。
+git symbolic-ref HEAD "refs/heads/$branch"
 
 Write-Host '>> 2/4 写入忽略规则' -ForegroundColor Cyan
 @'
