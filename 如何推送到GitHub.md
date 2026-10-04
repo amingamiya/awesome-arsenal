@@ -20,55 +20,81 @@
 
 ## 二、推送（二选一）
 
-### 方式 A：跑脚本（推荐）
+### 方式 A：用 Token 推送（推荐，不弹浏览器）
+
+浏览器授权有个 2 分钟超时，超时就报 `TaskCanceledException`。用 token 更稳。
+
+**1. 生成 token**
+
+打开 <https://github.com/settings/tokens/new>：
+
+| 项 | 填什么 |
+|---|---|
+| Note | 随便填，如 `push-arsenal` |
+| Expiration | 选个期限（如 30 days） |
+| Scopes | **勾选 `repo`** ← 不勾推不上去 |
+
+点 Generate token，**立刻复制**——只显示一次，关掉页面就再也看不到。
+
+**2. 设环境变量并推送**
+
+```powershell
+$env:GITHUB_TOKEN = '粘贴你的 token'
+cd E:\ai\workbuddy\2026-10-04-14-24-30\awesome-arsenal
+powershell -ExecutionPolicy Bypass -File .\push.ps1
+```
+
+脚本检测到 `GITHUB_TOKEN` 就会走 MODE 1，**不弹任何浏览器窗口**。
+
+> token 只存在于当前这个 PowerShell 窗口的环境变量里，**不会**写进 `.git/config`，也**不会**存进 Windows 凭据管理器。关掉窗口就没了。
+
+### 方式 B：浏览器授权
 
 ```powershell
 cd E:\ai\workbuddy\2026-10-04-14-24-30\awesome-arsenal
 powershell -ExecutionPolicy Bypass -File .\push.ps1
 ```
 
-会弹出浏览器让你登录 GitHub，授权完自动完成推送。
+没设 `GITHUB_TOKEN` 时走这个。**需要在 2 分钟内完成浏览器授权**，超时或关掉弹窗就会报 `TaskCanceledException`。这不是脚本坏了，只是认证没走完。
 
-> ⚠️ **两个已踩过的坑，脚本都已规避，你不用再操心：**
->
-> 1. **不要在 PowerShell 里敲 `bash push.sh`**。PowerShell 的 `bash` 指向 WSL，
->    WSL 服务被禁用时会报「无法启动服务，原因可能是已被禁用或与其相关的设备没有启动」。
->    所以改用了 `push.ps1`（PowerShell 原生，零 WSL 依赖）。
->
-> 2. **`push.ps1` 已改成纯英文**。PowerShell 5.1 读不带 BOM 的 `.ps1` 时按系统 ANSI
->    码页（中文系统是 GBK）解析，脚本里的中文会变成乱码，连中文引号
->    `“”` 都会被误判成语法符号，直接报 `ParserError`。纯 ASCII 就没这个问题。
-
-### 方式 B：手动三条命令
+### 方式 C：手动一条命令
 
 ```powershell
 cd E:\ai\workbuddy\2026-10-04-14-24-30\awesome-arsenal
 git push -u https://github.com/amingamiya/awesome-arsenal.git main
 ```
 
-## 三、如果卡在登录
+## 三、报错对照表
 
-**现象**：终端提示 `Username for 'https://github.com':` 和 `Password for ...:`
+| 报错 | 原因 | 解决 |
+|---|---|---|
+| `TaskCanceledException`<br>`已取消一个任务` | 浏览器授权超时或被关掉 | 换方式 A（token），或重跑并在 2 分钟内完成授权 |
+| `403` / `Permission denied` | token 缺 `repo` 权限，或不属于 `amingamiya` | 重新生成，确认勾了 `repo` |
+| `repository not found` | 远端仓库没建 | 去 <https://github.com/new> 建**空**仓（README / .gitignore / license 三个都不勾） |
+| `non-fast-forward` / `fetch first` | 远端已有提交 | `git pull --rebase origin main` 后再推 |
+| `libpng warning: iCCP` | 无关的图片库警告 | 忽略，不影响推送 |
 
-**原因**：浏览器授权没走通，退回到基础认证模式。
+> 粘贴 token 时终端**不显示任何字符**，是正常的（防窃听设计），粘完直接回车。
 
-**做法**：
+## 四、报错排除法
 
-1. 打开 <https://github.com/settings/tokens/new>
-2. Note 随便填个名字，Expiration 选个期限
-3. **勾选 `repo` 权限**（这是关键，不勾无法推送）
-4. 生成后复制 token
-5. 终端里粘贴：
-   - Username：`amingamiya`
-   - Password：**粘贴那个 token**（不是 GitHub 登录密码）
+万一还是推不上去，先单独测连通性：
 
-token 只显示一次，关掉页面就再也看不到了。粘贴时终端不显示任何字符，是正常的，粘完直接回车。
+```powershell
+cd E:\ai\workbuddy\2026-10-04-14-24-30\awesome-arsenal
+git ls-remote https://github.com/amingamiya/awesome-arsenal.git
+```
 
-## 四、验证
+- 正常返回远端分支列表 → 网络和仓库都没问题，问题在认证
+- 报 `repository not found` → 仓库名拼错或没建好
+- 一直卡住不动 → 在等凭据输入，按 `Ctrl+C` 取消
+
+## 五、验证
 
 推送成功后打开 <https://github.com/amingamiya/awesome-arsenal>，应该能看到：
 
 ```
+.gitignore
 README.md
 01-实用工具.md
 02-爬虫与数据采集.md
@@ -79,9 +105,18 @@ README.md
 data/repos-2026-10-04.json
 push.ps1
 push.sh
+如何推送到GitHub.md
 ```
 
-## 五、以后更新内容
+也可以在本地验证：
+
+```powershell
+cd E:\ai\workbuddy\2026-10-04-14-24-30\awesome-arsenal
+git status                     # 应该显示 working tree clean
+git log --oneline              # 应该有 6 个 commit
+```
+
+## 六、以后更新内容
 
 本地改完文件后，只需要推送增量：
 
@@ -93,3 +128,9 @@ git push
 ```
 
 首次 `git push -u` 之后，origin 已绑定，后续直接 `git push` 即可。
+
+> ⚠️ **以后不要在 PowerShell 里敲 `bash push.sh`**。PowerShell 的 `bash` 指向 WSL，
+> 你的 WSL 服务没启用，会报「无法启动服务」。一律用 `push.ps1`。
+>
+> 另外 `push.ps1` 刻意写成纯英文：PowerShell 5.1 读不带 BOM 的 `.ps1` 时按 GBK 解析，
+> 中文注释会变乱码，中文全角引号 `“”` 会被当成语法符号 → `ParserError`。
