@@ -29,8 +29,15 @@ powershell -ExecutionPolicy Bypass -File .\push.ps1
 
 会弹出浏览器让你登录 GitHub，授权完自动完成推送。
 
-> ⚠️ 不要在 PowerShell 里敲 `bash push.sh`——PowerShell 的 `bash` 指向 WSL，
-> 如果 WSL 服务被禁用就会报「无法启动服务，原因可能是已被禁用或与其相关的设备没有启动」。
+> ⚠️ **两个已踩过的坑，脚本都已规避，你不用再操心：**
+>
+> 1. **不要在 PowerShell 里敲 `bash push.sh`**。PowerShell 的 `bash` 指向 WSL，
+>    WSL 服务被禁用时会报「无法启动服务，原因可能是已被禁用或与其相关的设备没有启动」。
+>    所以改用了 `push.ps1`（PowerShell 原生，零 WSL 依赖）。
+>
+> 2. **`push.ps1` 已改成纯英文**。PowerShell 5.1 读不带 BOM 的 `.ps1` 时按系统 ANSI
+>    码页（中文系统是 GBK）解析，脚本里的中文会变成乱码，连中文引号
+>    `“”` 都会被误判成语法符号，直接报 `ParserError`。纯 ASCII 就没这个问题。
 
 ### 方式 B：手动三条命令
 
